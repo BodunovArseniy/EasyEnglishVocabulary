@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.easyenglishvocabulary.DataBase.ActiveRecord;
 import com.example.easyenglishvocabulary.DataBase.DataBaseHelper;
 import com.example.easyenglishvocabulary.DataBase.GlossaryModel;
+import com.example.easyenglishvocabulary.Translaters.MicrosoftTranslator;
+import com.example.easyenglishvocabulary.Translaters.Translator;
 
 public class MyApplication extends android.app.Application {
 
@@ -29,6 +31,10 @@ public class MyApplication extends android.app.Application {
 
     public static ActiveRecord[] getModelsClass(){
         return new ActiveRecord[]{new GlossaryModel()};
+    }
+
+    public static Translator getTranslator(){
+        return new MicrosoftTranslator();
     }
 
 }

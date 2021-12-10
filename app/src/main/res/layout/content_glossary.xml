@@ -21,6 +21,12 @@
             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ,.-:"
             android:autofillHints="@string/GlossaryTextEnglish"
             android:id="@+id/englishET"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Перевести"
+            android:id="@+id/translateBTN"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -5,10 +5,14 @@ import android.os.Bundle;
 
 import com.example.easyenglishvocabulary.DataBase.ActiveQuery;
 import com.example.easyenglishvocabulary.DataBase.GlossaryModel;
+import com.example.easyenglishvocabulary.Translaters.HTTPRequest;
+import com.example.easyenglishvocabulary.Translaters.MicrosoftTranslator;
+import com.example.easyenglishvocabulary.Translaters.Translator;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +28,7 @@ import com.example.easyenglishvocabulary.databinding.ActivityGlossaryBinding;
 public class GlossaryActivity extends AppCompatActivity {
 
     GlossaryModel model;
+    Translator translator;
     EditText englishTextInput;
     EditText russianTextInput;
 
@@ -58,6 +63,26 @@ public class GlossaryActivity extends AppCompatActivity {
                 Intent intent = new Intent(GlossaryActivity.this, GlossaryListActivity.class);
                 startActivity(intent);
             }
+        });
+
+        translator = MyApplication.getTranslator();
+        translator.setPreRequestCallback(new HTTPRequest.Callback() {
+            @Override
+            public void handleResult(String result) {
+                Log.i("HTTP START", "htttp start");
+            }
+        });
+        translator.setPostRequestCallback(new HTTPRequest.Callback() {
+            @Override
+            public void handleResult(String result) {
+                russianTextInput.setText(result);
+            }
+        });
+
+        Button translate = (Button) findViewById(R.id.translateBTN);
+        translate.setOnClickListener(v -> {
+            String english = englishTextInput.getText().toString();
+            translator.translate(english);
         });
 
         int modelId = getIntent().getIntExtra("id", -1);
