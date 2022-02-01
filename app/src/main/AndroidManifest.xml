@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyEnglishVocabulary">
         <activity
+            android:name=".TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".GlossaryListActivity"
             android:exported="false" />
         <activity
@@ -30,5 +33,7 @@
             </intent-filter>
         </activity>
     </application>
+
     <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

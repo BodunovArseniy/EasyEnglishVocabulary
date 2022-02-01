@@ -6,13 +6,13 @@ import java.util.Map;
 public class GlossaryModel extends ActiveRecord{
 
     private static final String TABLE_NAME = "GLOSSARY";
-    private static final String COLUMN_ID = "id";
+    public static final String COLUMN_ID = "id";
     private static final String COLUMN_ID_TYPE = "INTEGER PRIMARY KEY AUTOINCREMENT";
-    private static final String COLUMN_ENGLISH = "english";
+    public static final String COLUMN_ENGLISH = "english";
     private static final String COLUMN_ENGLISH_TYPE  = "TEXT";
-    private static final String COLUMN_RUSSIAN = "russian";
+    public static final String COLUMN_RUSSIAN = "russian";
     private static final String COLUMN_RUSSIAN_TYPE  = "TEXT";
-    private static final String COLUMN_CORRECT_ANSWERS = "correctAnswers";
+    public static final String COLUMN_CORRECT_ANSWERS = "correctAnswers";
     private static final String COLUMN_CORRECT_ANSWERS_TYPE  = "INTEGER";
 
     public int id;

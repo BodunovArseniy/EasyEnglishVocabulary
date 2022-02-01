@@ -12,11 +12,15 @@
         <entry key="..\:/Android/Projects/app/src/main/res/layout/fragment_second.xml" value="0.20520833333333333" />
         <entry key="..\:/Android/Projects/app/src/main/res/layout/fragment_second2.xml" value="0.20520833333333333" />
         <entry key="..\:/Android/Projects/app/src/main/res/menu/menu_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37552083333333336" />
         <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/activity_glossary.xml" value="0.29528985507246375" />
         <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/activity_glossary_list.xml" value="0.35956227201667534" />
         <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/activity_main.xml" value="0.2758152173913043" />
+        <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/activity_test.xml" value="0.359375" />
         <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/content_glossary.xml" value="0.29528985507246375" />
+        <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/content_main.xml" value="0.2558876811594203" />
         <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/layout/gloassary_list_item.xml" value="0.29528985507246375" />
+        <entry key="..\:/AndroidProjects/EasyEnglishVocabulary/app/src/main/res/menu/menu_main.xml" value="0.359375" />
       </map>
     </option>
   </component>

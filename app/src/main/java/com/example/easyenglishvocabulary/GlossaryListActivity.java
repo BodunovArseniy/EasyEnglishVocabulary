@@ -17,16 +17,18 @@ import java.util.ArrayList;
 
 public class GlossaryListActivity extends AppCompatActivity {
 
+    private GlossaryModel[] glossaryModels;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glossary_list);
 
         ArrayList<GlossaryModel> list = new ActiveQuery<GlossaryModel>(GlossaryModel.class).getFromDB(null);
-        GlossaryModel[] array = list.toArray(new GlossaryModel[0]);
+        glossaryModels = list.toArray(new GlossaryModel[0]);
         ListView listView = (ListView) findViewById(R.id.glossary_list_view);
 
-        GlossaryAdapter adapter = new GlossaryAdapter(this, array);
+        GlossaryAdapter adapter = new GlossaryAdapter(this, glossaryModels);
         listView.setAdapter(adapter);
 
         Button button = (Button) findViewById(R.id.addItem);
@@ -43,7 +45,8 @@ public class GlossaryListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
                                     long id) {
                 Intent intent = new Intent(GlossaryListActivity.this, GlossaryActivity.class);
-                intent.putExtra("id", position);
+                int modelid = glossaryModels[position].id;
+                intent.putExtra("id", modelid);
                 startActivity(intent);
             }
         });

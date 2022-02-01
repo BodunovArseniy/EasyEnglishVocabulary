@@ -42,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button gotoTest = (Button)findViewById(R.id.gototest);
+        gotoTest.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
